@@ -10,7 +10,8 @@ then
 fi
 
 echo "::notice ::Access to env $GITHUB_ACTION"
-sh -c "echo '::notice ::Access to env $MY_ENV'"
+sh -c "echo '::notice ::Access to env $GITHUB_REPOSITORY'"
+echo "::notice ::Access to local env $MYDATA"
 echo "Hello $1"
 echo "Hello $2"
 time=$(date)
