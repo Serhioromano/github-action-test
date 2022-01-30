@@ -14,7 +14,7 @@ outputs:
   output1: # id of output
     description: 'Output test'
 env:
-  - MY_ENV: somehting
+  MY_ENV: somehting
   
 runs:
   using: 'docker'
