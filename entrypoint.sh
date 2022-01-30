@@ -4,7 +4,7 @@ set -e
 
 echo "::exho::on"
 
-if ["$1" = "yes"];
+if ["$1" == "yes"];
 then
     echo "::notice ::Yes works"
 fi
