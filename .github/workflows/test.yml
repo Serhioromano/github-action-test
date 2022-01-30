@@ -1,0 +1,12 @@
+name: Test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Serhioromano/github-action-test@v1
+        with:
+          input1: yes
+          input2: String here
