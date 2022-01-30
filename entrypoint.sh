@@ -9,6 +9,8 @@ then
     echo "::notice ::Yes works"
 fi
 
+echo "::notice ::Access to env $GITHUB_ACTION"
+echo "::notice ::Access to env $MY_ENV"
 echo "Hello $1"
 echo "Hello $2"
 time=$(date)
