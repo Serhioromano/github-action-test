@@ -9,4 +9,5 @@ if [ $1 == "yes" ]; then
     file=$(realpath "${PWD}/${filelist[*]}")
     echo "::notice ::Generating a VSIX file at ${file}"
     echo "::set-output name=vsix_path::${file}"
+    ls -la
 fi
