@@ -6,7 +6,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Serhioromano/github-action-test@v2
+      - name: Test this action
+        uses: Serhioromano/github-action-test@v3
         with:
           input1: yes
           input2: String here
+      - name: See file CLI
+        run: |
+          pwd
+          ls -la

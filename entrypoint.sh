@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-# set -e
+set -e
 
 echo "::exho::on"
 
@@ -13,3 +13,4 @@ echo "Hello $1"
 echo "Hello $2"
 time=$(date)
 echo "::set-output name=output1::$time"
+touch test.txt
