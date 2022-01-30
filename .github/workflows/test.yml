@@ -1,13 +1,16 @@
 name: Test
 
-on: [push]
+on: 
+ push:
+  branch:
+    - 'develop'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Test this action
-        uses: Serhioromano/github-action-test@v3
+        uses: Serhioromano/github-action-test@develop
         with:
           input1: yes
           input2: String here
