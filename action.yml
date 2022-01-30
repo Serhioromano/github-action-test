@@ -16,9 +16,12 @@ outputs:
 env:
   MYDATA: somehting
   
+# runs:
+#   using: 'docker'
+#   image: 'Dockerfile'
+#   args:
+#     - ${{ inputs.input1 }}
+#     - ${{ inputs.input2 }}
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.input1 }}
-    - ${{ inputs.input2 }}
+  using: 'node16'
+  main: 'index.js'
