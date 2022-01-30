@@ -8489,16 +8489,17 @@ try {
     console.log(`Hello ${i2}!`);
     console.log(`Env ${process.env.GITHUB_REPOSITORY}!`);
     console.log(`Env local ${process.env.MYDATA}!`);
+    console.log(process.env);
     core.setOutput("output1", '10');
     const payload = JSON.stringify(github.context.payload, undefined, 2)
-    console.log(`The event payload: ${payload}`);
+    // console.log(`The event payload: ${payload}`);
     core.notice("TTTThis is notice");
     core.warning("TTTThis is warning");
     core.error("TTTThis is error");
-    fs.writeFileSync('text.txt', 'Some content');
+    fs.writeFileSync('text2.txt', 'Some content');
     core.notice(__dirname);
-    core.notice(exec('pwd'));
-    core.notice(exec('ls -la'));
+    core.notice(`${exec('pwd')}`);
+    core.notice(`${exec('ls -la')}`);
   } catch (error) {
     core.setFailed(error.message);
   }
