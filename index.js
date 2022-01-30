@@ -1,6 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const fs = require('fs');
+const exec = require('child_process').execSync;
 
 try {
     // `who-to-greet` input defined in action metadata file
@@ -17,6 +18,9 @@ try {
     core.warning("TTTThis is warning");
     core.error("TTTThis is error");
     fs.writeFileSync('text.txt', 'Some content');
+    core.notice(__dirname);
+    core.notice(exec('pwd'));
+    core.notice(exec('ls -la'));
   } catch (error) {
     core.setFailed(error.message);
   }

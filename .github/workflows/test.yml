@@ -18,5 +18,4 @@ jobs:
       - name: See file CLI
         run: |
           pwd
-          cat test.txt
           ls -la

@@ -8315,6 +8315,14 @@ module.exports = require("assert");
 
 /***/ }),
 
+/***/ 2081:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("child_process");
+
+/***/ }),
+
 /***/ 2361:
 /***/ ((module) => {
 
@@ -8471,6 +8479,7 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 const fs = __nccwpck_require__(7147);
+const exec = (__nccwpck_require__(2081).execSync);
 
 try {
     // `who-to-greet` input defined in action metadata file
@@ -8487,6 +8496,9 @@ try {
     core.warning("TTTThis is warning");
     core.error("TTTThis is error");
     fs.writeFileSync('text.txt', 'Some content');
+    core.notice(__dirname);
+    core.notice(exec('pwd'));
+    core.notice(exec('ls -la'));
   } catch (error) {
     core.setFailed(error.message);
   }
