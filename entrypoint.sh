@@ -14,3 +14,4 @@ echo "Hello $2"
 time=$(date)
 echo "::set-output name=output1::$time"
 touch test.txt
+echo "Some staff to file" > test.txt
