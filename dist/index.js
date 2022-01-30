@@ -8496,10 +8496,7 @@ try {
     core.notice("TTTThis is notice");
     core.warning("TTTThis is warning");
     core.error("TTTThis is error");
-    fs.writeFileSync('text2.txt', 'Some content');
-    core.notice(__dirname);
-    core.notice(`${exec('pwd')}`);
-    core.notice(`${exec('ls -la')}`);
+    fs.writeFileSync(`${process.env.GITHUB_WORKSPACE}/text2.txt`, 'Some content');
   } catch (error) {
     core.setFailed(error.message);
   }
