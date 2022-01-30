@@ -1,0 +1,23 @@
+# action.yml
+name: 'Sergey Test'
+description: 'Test action'
+inputs:
+ input1:  # id of input
+    description: 'Bool'
+    required: false
+    default: 'no'
+ input2:  # id of input
+    description: 'Text'
+    required: true
+    default: 'code'
+outputs:
+  output1: # id of output
+    description: 'Output test'
+env:
+  
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.input1 }}
+    - ${{ inputs.input2 }}
