@@ -10,5 +10,6 @@ then
 fi
 
 echo "Hello $1"
+echo "Hello $2"
 time=$(date)
 echo "::set-output name=output1::$time"
