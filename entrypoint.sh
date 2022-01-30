@@ -4,7 +4,8 @@ set -e
 
 if [ $1 == "yes" ]; then
     # vsce package
-    toush test.txt
+    touch test.txt
+    echo "123" > test.txt
     filelist=`ls *.txt`
     file=`realpath "$PWD/${filelist[*]}"`
     echo "::notice ::Generating a VSIX file at $file"
