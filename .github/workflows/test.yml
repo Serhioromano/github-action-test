@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Serhioromano/github-action-test@v1
+      - uses: Serhioromano/github-action-test@v2
         with:
           input1: yes
           input2: String here
