@@ -1,5 +1,5 @@
 #!/bin/bash
-
+1.0.3
 set -e
 
 if [ $1 == "yes" ]; then
