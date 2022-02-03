@@ -9,6 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: pwd
       - name: Test this action
         uses: Serhioromano/github-action-test@develop
         with:
